@@ -135,8 +135,11 @@ const prevAction = ()=>{
 prev.addEventListener('mouseover',()=>{
   if (pageNum>1){
     prev.classList.remove('disabled')
+    prev.addEventListener('click',prevAction)
   }
-  prev.addEventListener("click",prevAction)
+  else{
+    prev.removeEventListener('click',prevAction)
+  }
 })
 var selectedGenre = [];
 setGenre();
