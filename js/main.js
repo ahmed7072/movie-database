@@ -125,7 +125,7 @@ next.addEventListener('click',()=>{
   current.innerHTML=`${pageNum}`
 })
 
-prevAction = ()=>{
+const prevAction = ()=>{
   pageNum-=1
   let url = BASE_URL + `/discover/movie?&page=${pageNum}&sort_by=popularity.desc&` + API_KEY;
   getMovies(url);
